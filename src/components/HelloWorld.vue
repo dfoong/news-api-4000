@@ -59,17 +59,33 @@
       </select>
       <select v-model="category">
         <option value="business">Business</option>
+        <option value="technology">Technology</option>
+        <option value="general">General</option>
+        <option value="science">Science</option>
+        <option value="health">Health</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="sports">Sports</option>
+
       </select>
+<!-- changing font selector (1)
+      <select v-model="font">
+        <option value="arial"><span class="arial">arial</span>
+        </option>
+        <option value="timesnewroman"><span class="timesnewroman">Times New Roman</span>
+        </option>
+      </select> -->
+
       <button type="submit">Get News</button>
     </form>
     <ul v-if='results'>
       <li v-for='article in results.articles'>
-        {{article.title}}, {{article.publishedAt}}
+        <a v-bind:href="article.url">{{article.title}}</a>
+       {{article.publishedAt}}
+        <br>{{article.description}}
+        <!-- changing font selector (2)
+        <p v-bind:class="font">{{article.description}}</p>
+        -->
         <br>
-        {{article.description}}
-        <br><br>       
-        {{article.url}}
-        <br><br>
       </li>
     </ul>
 
@@ -115,25 +131,38 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- styles here for LIST -->
 <style scoped>
+
 h1, h2 {
   font-weight: normal;
 }
 
 ol {
-  list-style-type: katakana-iroha;
+  list-style-type: decimal;
   width: 40%;
   margin: auto;
 }
 
 li {
-  display: list-item;
+  display: block;
+  border-bottom: solid;
+  font-family: 'Noto Serif', serif;
   text-align: left;
-  margin: 0px 30px 0px 50px;
+  padding: 20px;
+  margin: 10px 30px 0px 50px;
 }
 
 a {
-  color: #42b983;
+  color: #2f77bc;
 }
+
+/* choosing font options
+.arial {
+  font-family: 'Alegreya SC', serif;
+}
+
+.timesnewroman {
+  font-family: 'texthere', serif;
+  } */
 </style>
