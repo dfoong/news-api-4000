@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <a href="./news-api-4000/index.html">
+    <a href="./index.html">
     <img src="./assets/worldmapdots2.png" alt="a silhouette of the world, in dot form" width="40%">
     </a>
     <div id="intro">
