@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <img src="./assets/worldmapdots.png" alt="a silhouette of the world, in dot form" width="40%">
+    <a href="/index.html">
+    <img src="./assets/worldmapdots2.png" alt="a silhouette of the world, in dot form" width="40%">
+    </a>
     <div id="intro">
       <h1>welcome</h1>
       <h2>I want to read news about...</h2>
@@ -56,5 +58,24 @@ a:hover {
   color:#e709a0;
 }
 
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: 1px solid black;
+  outline: none;
+  background-color: #fff23e;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
 
 </style>
